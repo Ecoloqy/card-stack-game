@@ -11,4 +11,4 @@ RUN npm run build --prod
 FROM nginx:1.22.0-alpine as deploy
 
 COPY nginx.conf /etc/nginx/nginx.conf
-COPY --from=build /app/dist/web-rpg-game /usr/share/nginx/html
+COPY --from=build /app/build /usr/share/nginx/html
